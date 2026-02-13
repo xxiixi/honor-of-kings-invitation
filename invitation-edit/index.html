@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>上分之约·致臻邀请</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;600&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="edit-mode">
+
+    <div class="edit-wrap">
+    <div class="card-container card-container--flat shadow-soft" id="card">
+        
+        <!----------------------------- 封面 ---------------------------------->
+        <div class="cover-page">
+            <div class="xi-seal">王<br>者<br>荣<br>耀<br>高<br>手</div>
+            <div class="circle-line">
+                <div class="title-main">请<br>柬</div>
+                <div class="title-main-overlay">请<br>柬</div>
+            </div>
+
+            <div class="side-text-col">
+                <div class="side-text">请带我上分!</div>
+            </div>
+
+            <div class="hint">TAP TO OPEN</div>
+        </div>
+
+        <!----------------------------- 内页 ---------------------------------->
+        <div class="inside-page">
+            <div class="inner-frame">
+                <div class="corner-deco c-tl"></div>
+                <div class="corner-deco c-tr"></div>
+                <div class="corner-deco c-bl"></div>
+                <div class="corner-deco c-br"></div>
+
+                <div class="inner-frame-top">
+                <div class="header-xi">
+                    <span class="lantern">🏮</span>
+                    <span>喜事将近 良辰已定</span>
+                    <span class="lantern">🏮</span>
+                </div>
+
+                <div class="invite-message">
+                    ———与君共聚———
+                </div>
+
+                <div class="main-message">
+                    「王者荣耀」
+                </div>
+
+                <div class="content-block">
+                    <p>
+                        尊敬的<span class="rank-text" contenteditable="true" data-maxlength="12">银河系最强打野</span>
+                        <br>
+                        <span class="username-text" contenteditable="true" data-maxlength="15">欧亨利式团灭</span>
+                    </p>
+                    <div class="invite-vertical">
+                        <p>诚邀您莅临 <span>王者峡谷</span></p>
+                        <p class="glory-text">诠释顶级理解</p>
+                        <p class="glory-text">问鼎荣耀之巅</p>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 票据样式的信息栏 -->
+                <div class="ticket-info">
+                    <div class="info-row">
+                        <span class="label">时间</span>
+                        <div class="val">
+                            <span class="date-main" contenteditable="true" data-maxlength="24">2026.02.14 (周六)</span>
+                            <span class="date-sub" style="font-size:12px; color:#999" contenteditable="true" data-maxlength="30">乙巳年 腊月廿七 19:00</span>
+                        </div>
+                    </div>
+                    <div class="info-row" style="margin-bottom:0">
+                        <span class="label">地点</span>
+                        <div class="val">
+                            <span class="place-main" contenteditable="true" data-maxlength="20">王者荣耀五排房间</span>
+                            <span class="place-sub" style="font-size:12px; color:#999" contenteditable="true" data-maxlength="30">密语: TAKEmeFly666</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 修改印章HTML结构：增加内层容器实现双边框 -->
+                <div class="footer-stamp">
+                    <div class="stamp-inner">
+                        上分<br>大吉
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="edit-actions">
+        <button type="button" class="btn-generate" id="btnGenerate">生成邀请链接</button>
+        <input type="text" class="edit-url-output" id="generatedUrl" readonly placeholder="点击上方按钮生成链接，将复制到剪贴板">
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
