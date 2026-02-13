@@ -90,16 +90,17 @@ body {
     position: absolute;
     top: 40px;
     left: 40px;
-    font-family: 'Ma Shan Zheng', cursive;
-    font-size: 40px;
-    color: rgba(158, 26, 26, 1);
-    background: rgba(243, 229, 171);
-    width: 70px; 
-    height: 270px;
+    /* font-family: 'Zhi Mang Xing', cursive; */
+    font-weight: 900;
+    font-size: 75px;
+    color: rgba(158, 26, 26);
+    background: rgba(243, 229, 171, 0.9);
+    width: 100px; 
+    height: 100px;
     display: flex; 
     justify-content: center; 
     align-items: center;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
     z-index: 10;
 }
@@ -141,8 +142,8 @@ body {
 
 .side-text-col {
     position: absolute;
-    margin-top: 60px;
-    margin-left: 120px;
+    margin-top: 70px;
+    margin-left: 20%;
     height: 60%;
     display: flex;
     align-items: center;
