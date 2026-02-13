@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -79,7 +79,7 @@
         /* 1. 金色线条装饰 (Golden Circle Line) */
         .circle-line {
             position: absolute;
-            top: 15%; right: -20%;
+            top: 35%; right: -25%;
             width: 90%; padding-bottom: 90%; /* 保持圆形 */
             border: 1px solid rgba(255, 236, 179, 0.3);
             border-radius: 50%;
@@ -89,11 +89,34 @@
             border: 1px solid rgba(255, 236, 179, 0.15); border-radius: 50%;
         }
 
+        /* 2. 囍字 (印章风格) - 封面左上角 */
+        .xi-seal {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 45px;
+            color: rgba(158, 26, 26, 1);
+            background: rgba(243, 229, 171);
+            width: 80px; height: 230px;
+            display: flex; justify-content: center; align-items: center;
+            border-radius: 4px;
+            box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        .xi-seal::before {
+            content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+            background-image: radial-gradient(rgba(158, 26, 26, 0.2) 1px, transparent 1px);
+            background-size: 4px 4px; opacity: 0.5;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
         /* 3. 主标题 "请帖" (在圆环中) */
         .title-main {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 48%;
+            left: 48%;
             transform: translate(-50%, -50%);
             font-family: 'Zhi Mang Xing', cursive;
             font-size: 100px;
@@ -105,11 +128,11 @@
         /* 叠加一层清晰的金色 */
         .title-main-overlay {
             position: absolute;
-            top: 60%;
+            top: 55%;
             left: 40%;
             transform: translate(-50%, -50%);
             font-family: 'Ma Shan Zheng', cursive;
-            font-size: 80px;
+            font-size: 85px;
             color: var(--gold-light);
             letter-spacing: 0.1em;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -119,8 +142,8 @@
 
         .side-text-col {
             position: absolute;
-            margin-top: 300px;
-            margin-left: 50px;
+            margin-top: -30px;
+            margin-left: 140px;
             height: 60%;
             display: flex;
             align-items: center;
@@ -192,12 +215,8 @@
             justify-content: center;
             gap: 8px;
         }
-        .header-xi img {
-            height: 28px;
-            width: auto;
-            vertical-align: middle;
-        }
-        .header-xi .img-fallback {
+        /* 喜事将近左右红灯笼 */
+        .header-xi .lantern {
             font-size: 28px;
             line-height: 1;
             vertical-align: middle;
@@ -221,7 +240,6 @@
             margin-bottom: 3vh;
             color: #2a2a2a;
         }
-
         /* 国服对抗路 + 用户名样式 */
         .content-block .rank-text {
             /* display: inline-block; */
@@ -369,9 +387,10 @@
         
         <!----------------------------- 封面 ---------------------------------->
         <div class="cover-page">
+            <div class="xi-seal">王<br>者<br>荣<br>耀</div>
             <div class="circle-line">
-                <div class="title-main">请<br>帖</div>
-                <div class="title-main-overlay">请<br>帖</div>
+                <div class="title-main">请<br>柬</div>
+                <div class="title-main-overlay">请<br>柬</div>
             </div>
 
             <div class="side-text-col">
@@ -390,9 +409,9 @@
                 <div class="corner-deco c-br"></div>
 
                 <div class="header-xi">
-                    <img src="大国标.png" alt="国标" onerror="var s=document.createElement('span'); s.textContent='🏮'; s.className='img-fallback'; this.replaceWith(s);">
+                    <span class="lantern">🏮</span>
                     <span>喜事将近</span>
-                    <img src="大国标.png" alt="国标" onerror="var s=document.createElement('span'); s.textContent='🏮'; s.className='img-fallback'; this.replaceWith(s);">
+                    <span class="lantern">🏮</span>
                 </div>
                 
                 <div class="main-message">
@@ -425,7 +444,7 @@
                         <span class="label">地点</span>
                         <div class="val">
                             王者荣耀五排房间<br>
-                            <span style="font-size:12px; color:#999">ID: 123456</span>
+                            <span style="font-size:12px; color:#999">密语: TAKEmeFly666</span>
                         </div>
                     </div>
                 </div>
@@ -445,8 +464,6 @@
         function flipCard() {
             const card = document.getElementById('card');
             card.classList.toggle('open');
-            
-            // 简单的触觉反馈 (如果设备支持)
             if(navigator.vibrate) navigator.vibrate(15);
         }
     </script>
