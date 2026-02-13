@@ -58,6 +58,7 @@
 
     var btn = document.getElementById('btnGenerate');
     var output = document.getElementById('generatedUrl');
+    var btnCopyAll = document.getElementById('btnCopyAll');
     if (btn && output) {
         btn.addEventListener('click', function () {
             var url = buildInviteUrl();
@@ -66,11 +67,26 @@
                 navigator.clipboard.writeText(url).then(function () {
                     output.placeholder = '已复制到剪贴板，可发给好友打开只读邀请页';
                 }).catch(function () {
-                    output.placeholder = '请手动复制上方链接';
+                    output.placeholder = '请点击「复制全部」按钮复制链接';
                 });
             } else {
-                output.select();
-                output.placeholder = '请手动复制上方链接 (Ctrl+C)';
+                output.placeholder = '请点击「复制全部」按钮复制链接';
+            }
+        });
+    }
+    if (btnCopyAll && output) {
+        btnCopyAll.addEventListener('click', function () {
+            var url = output.value ? output.value.trim() : '';
+            if (!url) return;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(function () {
+                    btnCopyAll.textContent = '已复制';
+                    setTimeout(function () { btnCopyAll.textContent = '复制全部'; }, 1500);
+                }).catch(function () {
+                    output.placeholder = '请手动选择上方链接后复制';
+                });
+            } else {
+                output.placeholder = '请手动选择上方链接后复制';
             }
         });
     }
