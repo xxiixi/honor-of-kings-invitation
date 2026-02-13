@@ -47,7 +47,13 @@
         }
         
         .card-container.open {
-            transform: translateX(15%) rotateY(-5deg); /* 微微倾斜更有3D感 */
+            transform: translateX(15%) rotateY(-5deg);
+        }
+
+        @media (max-width: 580px) {
+            .card-container.open {
+                transform: translateX(5%);
+            }
         }
 
         /* 通用阴影 */
