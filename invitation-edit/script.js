@@ -33,8 +33,8 @@
     }
 
     function getReadOnlyBaseUrl() {
-        var href = location.href;
-        return href.replace(/\/invitation-edit(\/index\.html)?(\?.*)?$/i, '/invitation-read-only/index.html');
+        var base = (window.INVITATION_CONFIG && window.INVITATION_CONFIG.readOnlyBaseUrl) || '';
+        return typeof base === 'function' ? base() : base;
     }
 
     function buildInviteUrl() {
