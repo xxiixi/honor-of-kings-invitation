@@ -15,6 +15,7 @@
             --gold: #d4af37;
             --gold-light: #f3e5ab;
             --text-dark: #2c2c2c;
+            --card-content-gold: #d4a509;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -35,7 +36,7 @@
         /* 主容器 - PC 端固定尺寸，页面居中，不随窗口缩小被压缩 */
         .card-container {
             position: relative;
-            width: 350px;
+            width: 380px;
             height: 660px;
             min-width: 350px;
             min-height: 660px;
@@ -118,8 +119,8 @@
 
         .side-text-col {
             position: absolute;
-            top: 150px;
-            left: 35px;
+            margin-top: 300px;
+            margin-left: 50px;
             height: 60%;
             display: flex;
             align-items: center;
@@ -159,8 +160,12 @@
         .inner-frame {
             border: 3px double var(--card-red);
             height: 100%; width: 100%;
-            padding: 20px 15px;
-            display: flex; flex-direction: column; align-items: center;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0;
             position: relative;
         }
         
@@ -199,7 +204,7 @@
             color: #2c2c2c;
             line-height: 1.3;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .content-block {
@@ -214,24 +219,24 @@
 
         /* 国服对抗路 + 用户名样式 */
         .content-block .rank-text {
-            display: inline-block;
-            padding: 0 6px;
-            margin: 0 2px;
-            color: var(--gold);
-            letter-spacing: 0.12em;
+            /* display: inline-block; */
+            /* padding: 0 1px; */
+            margin: 0 8px;
+            color: var(--card-red);
+            letter-spacing: 0.08em;
             font-weight: 900;
             text-shadow: 0 1px 0 rgba(0,0,0,0.12);
-            border-bottom: 2px solid rgba(212, 175, 55, 0.6);
+            border-bottom: 0.5px solid var(--card-red);
         }
         .content-block .username-text {
             display: inline-block;
             padding: 0 6px;
-            margin-left: 2px;
-            margin-top: 10px;
-            color: rgb(0, 5, 65);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: rgb(12, 12, 12);
             font-weight: 900;
             letter-spacing: 0.06em;
-            font-size: 1em;
+            font-size: 1.2em;
         }
         .content-block .highlight-text {
             color: #555;
@@ -244,7 +249,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
+            /* gap: 2px; */
         }
         .content-block .invite-vertical p {
             width: 100%;
@@ -254,16 +259,7 @@
             color: var(--card-red);
             font-weight: 900;
             letter-spacing: 0.15em;
-        }
-        
-        /* Steam 风格化 */
-        .steam-text {
-            display: inline-block;
-            border-bottom: 2px solid #171a21;
-            color: #171a21;
-            font-weight: 900;
-            font-family: sans-serif;
-            padding: 0 4px;
+            margin-bottom: -10px;
         }
 
         /* 信息票据卡 */
@@ -272,7 +268,7 @@
             width: 100%;
             border: 1px dashed #ccc;
             padding: 15px;
-            border-radius: 8px;
+            /* border-radius: 8px; */
             position: relative;
         }
         /* 票据左右的半圆缺口 */
@@ -291,7 +287,7 @@
 
         /* ========== 核心修复：中式双边框印章 ========== */
         .footer-stamp {
-            margin-top: 30px;
+            margin-top: 25px;
             width: 80px;
             height: 80px;
             position: relative;
@@ -400,12 +396,13 @@
 
                 <div class="content-block">
                     <p>
-                        尊敬的<span class="rank-text">国服对抗路</span>
-                        <span class="username-text">UserName</span>
+                        尊敬的<span class="rank-text">国服最强对抗路</span>
+                        <br>
+                        <span class="username-text">少先队队长？</span>
                     </p>
                     <div class="invite-vertical">
                         <p>诚邀您莅临 王者峡谷 </p>
-                        <p>诠释顶级理解</p>
+                        <p class="glory-text">诠释顶级理解</p>
                         <p class="glory-text">问鼎荣耀之巅</p>
                     </div>
                 </div>
