@@ -197,6 +197,11 @@
             width: auto;
             vertical-align: middle;
         }
+        .header-xi .img-fallback {
+            font-size: 28px;
+            line-height: 1;
+            vertical-align: middle;
+        }
 
         .main-message {
             font-family: 'Ma Shan Zheng', cursive;
@@ -385,9 +390,9 @@
                 <div class="corner-deco c-br"></div>
 
                 <div class="header-xi">
-                    <img src="大国标.png" alt="国标">
+                    <img src="大国标.png" alt="国标" onerror="var s=document.createElement('span'); s.textContent='🏮'; s.className='img-fallback'; this.replaceWith(s);">
                     <span>喜事将近</span>
-                    <img src="大国标.png" alt="国标">
+                    <img src="大国标.png" alt="国标" onerror="var s=document.createElement('span'); s.textContent='🏮'; s.className='img-fallback'; this.replaceWith(s);">
                 </div>
                 
                 <div class="main-message">
