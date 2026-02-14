@@ -6,17 +6,17 @@
 
 封面：
 
-![封面](img/ScreenShot-cover.png)
+
 
 内容：
 
-![内容](img/ScreenShot-conotent.png)
+
 
 ---
 
 ## 部署
 
-本项目可通过MCP部署到掘金并生成预览链接
+本项目通过MCP部署到掘金并生成预览链接
 
 在 Cursor 中对 AI 说一句即可触发部署，例如：
 
