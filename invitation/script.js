@@ -59,7 +59,7 @@ function flipCard() {
             dateMain: '2026.02.15 21:00(周日)',
             dateSub: '乙巳年 腊月廿八 亥时',
             placeMain: '王者荣耀五排房间',
-            placeSub: 'No.TAKEmeFly666',
+            placeSub: 'ID:TAKE-me-Fly-666',
             stampText: '上分\n大吉'
         }
     };
