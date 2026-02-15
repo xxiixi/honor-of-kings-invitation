@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>❤️‍🔥十年之约·致臻邀请</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;600&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-container shadow-soft" id="card" onclick="flipCard()">
+        
+        <!----------------------------- 封面 ---------------------------------->
+        <div class="cover-page">
+            <div class="xi-seal">囍</div>
+            <div class="circle-line">
+                <div class="title-main">请<br>柬</div>
+                <div class="title-main-overlay">请<br>柬</div>
+            </div>
+            <div class="side-text-col">
+                <div class="side-text">共赴十年之约</div>
+            </div>
+
+            <div class="hint">TAP TO OPEN</div>
+        </div>
+
+        <!----------------------------- 内页 ---------------------------------->
+        <div class="inside-page">
+            <div class="inner-frame">
+                <div class="corner-deco c-tl"></div>
+                <div class="corner-deco c-tr"></div>
+                <div class="corner-deco c-bl"></div>
+                <div class="corner-deco c-br"></div>
+
+                <div class="inner-frame-top">
+                <div class="header-xi">
+                    <span class="lantern">🏮</span>
+                    <span>喜事将近 良辰已定</span>
+                    <span class="lantern">🏮</span>
+                </div>
+
+                <div class="invite-message">———与君共聚———</div>
+
+                <div class="main-message">王者荣耀</div>
+
+                <div class="content-block">
+                    <p>
+                        尊敬的<span class="rank-text" data-config="inside.rank"></span>
+                        <br>
+                        <span class="username-text" data-config="inside.name"></span>
+                    </p>
+                    <div class="invite-vertical">
+                        <p>诚邀您莅临 <span class="venue-name">王者峡谷</span></p>
+                        <p class="glory-text">诠释顶级理解</p>
+                        <p class="glory-text">问鼎荣耀之巅</p>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 票据样式的信息栏 -->
+                <div class="ticket-info">
+                    <div class="info-row">
+                        <span class="label">时间</span>
+                        <div class="val">
+                            <span class="date-main" data-config="inside.dateMain"></span><br>
+                            <span class="date-sub" style="font-size:12px; color:#999" data-config="inside.dateSub"></span>
+                        </div>
+                    </div>
+                    <div class="info-row" style="margin-bottom:0">
+                        <span class="label">地点</span>
+                        <div class="val">
+                            <span class="place-main" data-config="inside.placeMain"></span><br>
+                            <span class="place-sub" style="font-size:12px; color:#999" data-config="inside.placeSub"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 修改印章HTML结构：增加内层容器实现双边框 -->
+                <div class="footer-stamp">
+                    <div class="stamp-inner" data-config="inside.stampText"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
